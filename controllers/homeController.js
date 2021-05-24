@@ -9,7 +9,7 @@ const homeController = {
         var details = {};
         
         db.findMany(Post, {}, '', function(result){
-            details.posts = result.reverse();
+            details.posts = result;
             console.log(details.posts);
             res.render('home', {details} );
         });
@@ -24,7 +24,7 @@ const homeController = {
         db.findMany(Post, {}, '', function(result){
             
             
-            details.posts = result.reverse();
+            details.posts = result;
             console.log(result);
             details.user = user;
             res.render('home', {details} );
