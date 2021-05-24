@@ -53,7 +53,7 @@ const searchController = {
 
             db.findMany(Post, {"category": new RegExp(toSearch, 'i')}, '', function(result){
                 var details = {};
-                details.posts = result.reverse();
+                details.posts = result;
                 details.user = req.params.username;
                 console.log(details.posts);
                 
