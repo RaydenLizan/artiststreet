@@ -56,8 +56,8 @@ hbs.registerHelper('equal', function (a, b) {
 });
 
 dotenv.config();
-port = process.env.PORT;
-hostname = process.env.HOSTNAME;
+port = process.env.PORT || "3000";
+hostname = process.env.HOSTNAME || "mongodb+srv://admin:admin@cluster0.khuft.mongodb.net/test";
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
