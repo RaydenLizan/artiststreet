@@ -2,11 +2,11 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 
 dotenv.config();
-port = process.env.PORT;
-hostname = process.env.HOSTNAME;
+port = process.env.PORT || "3000";
+hostname = "0.0.0.0";
 
 //const client = mongodb.MongoClient;
-const url = process.env.DB_URL;
+const url = "mongodb+srv://admin:admin@cluster0.khuft.mongodb.net/test";
 const options = { 
 	useUnifiedTopology: true, 
 	useNewUrlParser: true
